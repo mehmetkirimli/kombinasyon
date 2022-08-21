@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class komb {
+    public static void main(String[] args) {
+        int k, s, i = 1, total1 = 1, a = 1, total2 = 1, c = 1, total3 = 1, d;
+        Scanner bjk = new Scanner(System.in);
+
+        System.out.println("Kume elemanlarinin sayisini giriniz :");
+        k = bjk.nextInt();
+
+        System.out.println("Kumedeki gruplasma sayisini giriniz :");
+        s = bjk.nextInt();
+
+        while (i < k) {
+            i++;
+            total1 = total1 * i;
+        }
+        System.out.println(k + " faktoriyel = " + total1);
+
+        while (a < s) {
+            a++;
+            total2 = total2 * a;
+
+        }
+        System.out.println(s + " faktoriyel = " + total2);
+        d = k - s;
+
+        while (c < d) {
+            c++;
+            total3 = total3 * c;
+
+        }
+        System.out.println(d + " faktoriyel = " + total3);
+
+        int komb = (total1 / (total2 * (total3)));
+
+        System.out.println("N'nin r li kombinasyonu : " + komb);
+
+
+    }
+}
